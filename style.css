@@ -1,106 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
-:root{
-     /* ### Primary */
+:root { /* ### Primary */
 
-     --Darkcyan: hsl(158, 36%, 37%);
-     --Cream: hsl(30, 38%, 92%);
- 
-     /* ### Neutral */
- 
-     --Verydarkblue: hsl(212, 21%, 14%);
-     --Darkgrayishblue: hsl(228, 12%, 48%);
-     --White : hsl(0, 0%, 100%);
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
 
+    /* ### Neutral */
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White : hsl(0, 0%, 100%);
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
-body{
+body {
     width: 100%;
     height: auto;
     background-color: var(--Cream);
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-main{
+main {
     width: 600px;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     position: relative;
     top: 90px;
     background-color: var(--White);
     border-radius: 1rem;
-
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
     border-radius: 1rem 0 0 1rem;
 }
 
-section#image{
+section#image {
     flex: 1;
 }
 
-section#product{
+section#product {
     flex: 1;
     margin: 1.5rem;
 }
 
-section#product h1{
-    font-family: 'Fraunces',serif;
+section#product h1 {
+    font-family: 'Fraunces', serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
-#product-price{ 
+section#product h2{
+    font-weight: lighter;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+#product-price {
     margin-top: 1.5rem;
 }
 
-#price{
+#price {
     color: var(--Darkcyan);
     font-size: 2rem;
-    font-family: 'Fraunces',serif;
+    font-family: 'Fraunces', serif;
     margin-right: 1rem;
 }
-#oldprice{
-    text-decoration: line-through;
+
+#oldprice {
+   text-decoration: line-through;
 }
 
-button{
+button {
     width: 100%;
-    padding: 0.5rem 0 ;
+    padding: 0.5rem 0;
     margin-top: 1.5rem;
     color: var(--White);
     background-color: var(--Darkcyan);
     border-radius: 0.5rem;
     border: none;
     display: inline-block;
-    background-image: url(assets/images/icon-cart.svg);
+    background-image: url(images/icon-cart.svg);
     background-repeat: no-repeat;
     background-position-x: 27%;
     background-position-y: center;
 }
 
-button:hover{
+button:hover {
     background-color: #2e765c;
     transform: scale(1.01);
     cursor: pointer;
 }
 
-@media screen and(max-width:600px){
-    section#image{
-
+@media screen and (max-width: 600px){
+    section#image {
+        
     }
-    section#product{
-
+    
+    section#product {
+        
     }
     main {
         width: 90%;
@@ -110,23 +115,19 @@ button:hover{
         position: relative;
         top: 20px;
     }
-
-    img{
-        width: 100px;
-        border-radius: 1rem;
-
-    }
-
-    button{
+    img {
         width: 100%;
-        padding: 0.5rem 0;
-        background-position: 35%;
+        border-radius: 1rem;
+    }
+    button {
+        width: 100%;
+        padding: 0.5 rem 0;
+        background-position-x: 35%;
     }
 }
 
-@media screen and(max-width:450px) {
-    button{
-        background-position-x:30% ;
+@media screen and (max-width: 450px) {
+    button {
+        background-position-x: 30%;
     }
-    
 }
